@@ -1,0 +1,38 @@
+.top-offset{
+    margin-top: 1em;
+}
+/* Datatables hide search */
+.dataTables_filter { 
+    display: none; 
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+body {
+    margin-bottom: 60px;
+    background-color: transparent;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    h6{
+        text-align: center;
+    }
+}
+.no-line-break{
+    white-space: nowrap;
+}
+/* ng-barcode*/
+ng-barcode{
+    height: 3em;
+    width: 100%;
+    display: block;
+}

@@ -1,0 +1,20 @@
+<div class="row justify-content-center">
+    <div class="col-xs-12">
+        <div class="card mx-auto" ng-repeat="ticket in c.profile.tickets">
+            <div class="card-body">
+                <h5 class="card-title">Ticket</h5>
+                <div ng-repeat="event in ticket.events">
+                    <p>{{event.name}} - <span class="text-muted">{{event.date}}</span></p>
+                </div>
+                <ng-barcode
+                    ng-barcode-input="{{ticket._id}}" 
+                    ng-barcode-code="code39" 
+                    ng-barcode-color="[0,0,0]" 
+                    ng-barcode-background="[255,255,255]" 
+                    >
+                </ng-barcode>
+                <p>{{ticket._id}}</p>
+            </div>
+        </div>
+    </div>
+</div>

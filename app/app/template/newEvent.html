@@ -1,0 +1,73 @@
+<div class="row justify-content-center">
+    <div class="col-xs-12 col-md-8">
+        <div class="card mx-auto">
+            <div class="card-body">
+                <h5 class="card-title">New Event</h5>
+                <form name="form" ng-submit="c.register()" role="form">
+                    <div class="form-group" ng-class="{ 'has-error': form.name.$dirty && form.name.$error.required }">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" ng-model="c.event.name" required />
+                        <span ng-show="form.name.$dirty && form.name.$error.required" class="help-block">Name is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.price.$dirty && form.price.$error.required }">
+                        <label for="name">Price</label>
+                        <input type="number" step="1" name="price" id="price" class="form-control" ng-model="c.event.price" required />
+                        <span ng-show="form.price.$dirty && form.price.$error.required" class="help-block">Price is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.tickets.$dirty && form.tickets.$error.required }">
+                        <label for="name">Tickets</label>
+                        <input type="number" step="1" min="1" name="tickets" id="tickets" class="form-control" ng-model="c.event.tickets" required />
+                        <span ng-show="form.tickets.$dirty && form.tickets.$error.required" class="help-block">Tickets is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.maxTickets.$dirty && form.maxTickets.$error.required }">
+                        <label for="name">Max Tickets</label>
+                        <input type="number" step="1" min="1" name="maxTickets" id="maxTickets" class="form-control" ng-model="c.event.maxTickets" required />
+                        <span ng-show="form.maxTickets.$dirty && form.maxTickets.$error.required" class="help-block">Max tickets is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.place.$dirty && form.place.$error.required }">
+                        <label for="name">Place</label>
+                        <input type="text" name="place" id="place" class="form-control" ng-model="c.event.place" required />
+                        <span ng-show="form.place.$dirty && form.place.$error.required" class="help-block">Place is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.direction.$dirty && form.direction.$error.required }">
+                        <label for="name">Direction</label>
+                        <input type="text" name="direction" id="direction" class="form-control" ng-model="c.event.direction" required />
+                        <span ng-show="form.direction.$dirty && form.direction.$error.required" class="help-block">Direction is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.date.$dirty && form.date.$error.required }">
+                        <label for="name">Date</label>
+                        <input type="text" name="date" id="date" class="form-control" ng-model="c.event.date" required />
+                        <span ng-show="form.date.$dirty && form.date.$error.required" class="help-block">Date is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.maxDate.$dirty && form.maxDate.$error.required }">
+                        <label for="name">Max Date</label>
+                        <input type="text" name="maxDate" id="maxDate" class="form-control" ng-model="c.event.maxDate" required />
+                        <span ng-show="form.maxDate.$dirty && form.maxDate.$error.required" class="help-block">Max Date is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.contact.$dirty && form.contact.$error.required }">
+                        <label for="name">Contact</label>
+                        <input type="text" name="contact" id="contact" class="form-control" ng-model="c.event.contact" required />
+                        <span ng-show="form.contact.$dirty && form.contact.$error.required" class="help-block">Contact is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.description.$dirty && form.description.$error.required }">
+                        <label for="name">Description</label>
+                        <input type="text" name="description" id="description" class="form-control" ng-model="c.event.description" required />
+                        <span ng-show="form.description.$dirty && form.description.$error.required" class="help-block">Description is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.politics.$dirty && form.politics.$error.required }">
+                        <label for="name">Politics</label>
+                        <input type="text" name="politics" id="politics" class="form-control" ng-model="c.event.politics" required />
+                        <span ng-show="form.politics.$dirty && form.politics.$error.required" class="help-block">Politics is required</span>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" ng-disabled="form.$invalid || c.dataLoading" ng-class="c.dataLoading ? 'btn-info' : 'btn-primary'" class="btn">Save <span ng-show="c.dataLoading"><b class="fas fa-cog fa-spin"></b></span></button>
+                        <a href="/myEvents" class="btn btn-link">Cancel</a>
+                    </div>
+                    <div class="form-group">
+                        <span ng-show="c.message" class="text-danger">{{c.message}}</span>
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </div>
+</div>

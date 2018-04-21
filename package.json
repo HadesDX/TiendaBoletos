@@ -1,0 +1,26 @@
+{
+    "name": "NodeJsFinal",
+    "version": "1.0.0",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "description": "Final project",
+    "license": "None",
+    "author": "Diego Gomez garcia",
+    "contributors": [],
+    "dependencies": {
+        "serve-static": ">= 1.13.2",
+        "mongodb": ">= 3.0.6",
+        "body-parser": ">= 1.18.2",
+        "express": ">= 4.16.3",
+        "paypal-rest-sdk": ">= 1.8.1",
+        "basic-auth": ">= 2.0.0"
+    },
+    "scripts": {
+        "start": "node server.js"
+    }
+}

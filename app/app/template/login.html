@@ -1,0 +1,28 @@
+<div class="row justify-content-center">
+    <div class="col-xs-12 col-md-6">
+        <div class="card mx-auto">
+            <div class="card-body">
+                <h5 class="card-title">Login</h5>
+                <form name="form" ng-submit="vm.login()" role="form">
+                    <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" class="form-control" ng-model="vm.email" required />
+                        <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">Username is required</span>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" ng-model="vm.password" required />
+                        <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" ng-class="vm.dataLoading ? 'btn-info' : 'btn-primary'" class="btn">Login <span ng-show="vm.dataLoading"><b class="fas fa-cog fa-spin"></b></span></button>
+                        <a href="/register" class="btn btn-link">Register</a>
+                    </div>
+                    <div class="form-group">
+                        <span ng-show="vm.message" class="text-danger">{{vm.message}}</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

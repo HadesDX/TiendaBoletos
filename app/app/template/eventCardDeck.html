@@ -1,0 +1,19 @@
+<div class="row justify-content-center">
+    <div class="col-xs-6">
+        <a href="#" class="btn btn-info" ng-show="listEvents.start != 0" ng-click="listEvents.back()"><span class="fas fa-backward"></span> Go  back!</a>
+        <a href="#" class="btn btn-info" ng-show="listEvents.events.length > 0" ng-click="listEvents.next()">See More! <span class="fas fa-forward"></span></a>
+    </div>
+</div>
+<div class="card-deck top-offset">
+    <div class="card" ng-repeat="event in listEvents.events">
+        <img class="card-img-top" ng-src="{{event.image}}" src="" alt="">
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{event.name}}</h5>
+            <p class="card-text">{{event.description| limitTo:150}}</p>
+        </div>
+        <div class="card-footer">
+            <p class="text-right">{{event.date}}</p>
+            <a href="event/{{event._id}}" class="btn btn-success btn-block">Tell me more!</a>
+        </div>
+    </div>
+</div>

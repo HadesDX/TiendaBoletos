@@ -1,0 +1,21 @@
+<div class="card mx-auto">
+    <div class="card-body d-flex flex-column">
+        <h5 class="card-title"><span class="fas fa-book"></span> My Events</h5>
+        <div>
+            <a href="/newEvent" class="btn btn-primary"><span class="fas fa-plus-circle"></span> New Event</a>
+        </div>
+        <div ng-repeat="event in c.events" >
+            <div class="card mx-auto">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{event.name}} - {{event.date}}</h5>
+                    <p>Tickets {{event.ticketsSold}}/{{event.tickets}} @ {{event.price| currency}} and max {{event.maxTickets}} tickets per person, until {{event.maxDate}}</p>
+                    <p>{{event.contact}}</p>
+                    <p>{{event.description}}</p>
+                    <p>{{event.politics}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+    </div>
+</div>
